@@ -1,12 +1,34 @@
 type Query {
-  test: String
+  greeting: String
   students: [Student]
+  studentById(id: ID!): Student
 }
 
 type Student {
   id: ID!
   firstName: String
   lastName: String
-  password: String
-  collegeId: String
+  password:String
+  fullName: String
 }
+
+# type Query {
+#   test: String
+#   students: [Student]
+# }
+
+# # type Student {
+# #   id: ID!
+# #   firstName: String
+# #   lastName: String
+# #   password: String
+# #   collegeId: String
+# # }
+
+# type Student {
+#   id: ID!
+#   firstName: String
+#   lastName: String
+#   password: String
+#   collegeId: String
+# }
