@@ -1,15 +1,3 @@
-// const db = require( "./db" );
-// const { students } = require( "./db" );
-
-// const Query = {
-//     test: () => 'Test Success, GraphQL server is up & running !!',
-//     students: () => db.students.list(),
-//     studentById: ( root, args, context, info ) => {
-//         //args will contain parameter passed in query
-//         return db.students.get( args.id );
-//     },
-// };
-// module.exports = { Query };
 const db = require( './db' );
 const Query = {
     //resolver function for greeting
@@ -20,7 +8,7 @@ const Query = {
     //resolver function for students returns list
     students: () => db.students.list(),
 
-    // resolver function for studentbyId
+    //resolver function for studentbyId
     studentById: ( root, args, context, info ) => {
         //args will contain parameter passed in query
         return db.students.get( args.id );
