@@ -10,6 +10,10 @@ query myQuery($myname_Variable: String!) {
   sayHello(name: $myname_Variable)
 }
 
+type Mutation {
+  createStudent(collegeId: ID, firstName: String, lastName: String): String
+}
+
 enum ColorType {
   RED
   BLUE
@@ -37,6 +41,7 @@ type Student {
   lastName: String
   fullName: String
   college: College
+  collegeId:String
 }
 
 # type Query {

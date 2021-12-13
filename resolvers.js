@@ -19,6 +19,16 @@ const Query = {
     }
 };
 
+const Mutation = {
+    createStudent: ( root, args, context, info ) => {
+        return db.students.create( {
+            collegeId: args.collegeId,
+            firstName: args.firstName,
+            lastName: args.lastName
+        } );
+    }
+};
+
 //for each single student object returned,resolver is invoked
 
 const Student = {
@@ -32,4 +42,4 @@ const Student = {
 
 
 
-module.exports = { Query, Student };
+module.exports = { Query, Student, Mutation };
