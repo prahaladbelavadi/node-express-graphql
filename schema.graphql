@@ -3,10 +3,17 @@ type Query {
   students: [Student]
   studentById(id: ID!): Student
   sayHello(name: String!): String
+  setFavouriteColor(color: ColorType): String
 }
 
 query myQuery($myname_Variable: String!) {
   sayHello(name: $myname_Variable)
+}
+
+enum ColorType {
+  RED
+  BLUE
+  GREEN
 }
 
 # type Student {

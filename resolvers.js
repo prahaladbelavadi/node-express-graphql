@@ -13,7 +13,10 @@ const Query = {
         //args will contain parameter passed in query
         return db.students.get( args.id );
     },
-    sayHello: ( root, args, context, info ) => `Hi ${args.name} GraphQL server says Hello to you!!`
+    sayHello: ( root, args, context, info ) => `Hi ${args.name} GraphQL server says Hello to you!!`,
+    setFavouriteColor: ( root, args ) => {
+        return "Your Fav Color is :" + args.color;
+    }
 };
 
 //for each single student object returned,resolver is invoked
